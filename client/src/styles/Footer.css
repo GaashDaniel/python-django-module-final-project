@@ -1,0 +1,7 @@
+@import "./variables.css";
+
+.page-footer {
+  background-color: var(--color-surface-variant);
+  padding: 20px;
+  text-align: center;
+}

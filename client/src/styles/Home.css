@@ -1,0 +1,48 @@
+@import "./variables.css";
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-container h1,
+.home-container p {
+  text-align: center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-container h1 {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-xxl);
+  width: 100%;
+}
+
+.home-container p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  max-width: 800px;
+  width: 100%;
+}
+
+.home-container > * {
+  display: block;
+  width: 100%;
+}
+
+/* מרכוז גם לאלמנטים אחרים במידת הצורך */
+.home-container .search-section {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+}

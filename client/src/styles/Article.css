@@ -1,0 +1,188 @@
+@import "./variables.css";
+
+[data-page="article"] {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.article {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  border-top: 4px solid var(--color-primary);
+}
+
+.article h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article p {
+  font-size: var(--font-size-md);
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  margin: var(--spacing-lg) 0;
+  white-space: pre-line;
+}
+
+.article span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.article .meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-surface-variant);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+}
+
+.article .actions {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.comments {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.comments h2 {
+  font-size: var(--font-size-xl);
+  margin: var(--spacing-lg) 0;
+  color: var(--color-text-primary);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comment {
+  background-color: var(--color-surface-variant);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  position: relative;
+}
+
+.comment p {
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.comment span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.comment .MuiIconButton-root {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-lg) 0;
+}
+
+.comment-form label {
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.comment-form textarea {
+  background-color: var(--color-surface-variant);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md);
+  color: var(--color-text-primary);
+  min-height: 150px;
+  resize: vertical;
+  margin-bottom: var(--spacing-md);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+}
+
+.comment-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.comment-form button {
+  background-color: var(--color-primary);
+  color: #000;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.comment-form button:hover {
+  background-color: var(--color-secondary);
+}
+
+.comment-meta {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.article .tags {
+  margin: var(--spacing-lg) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+}
+
+.article .tag {
+  background-color: rgba(187, 134, 252, 0.15);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.article .tag:hover {
+  background-color: rgba(187, 134, 252, 0.3);
+}
+
+@media (max-width: 768px) {
+  [data-page="article"] {
+    padding: var(--spacing-md);
+  }
+
+  .article,
+  .comments {
+    padding: var(--spacing-md);
+  }
+
+  .article h2 {
+    font-size: var(--font-size-xl);
+  }
+}

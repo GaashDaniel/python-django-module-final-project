@@ -1,0 +1,59 @@
+@import "./variables.css";
+
+/* עיצוב עבור MUI Pagination */
+.MuiPagination-root {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.MuiPagination-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+/* עדכון צבעים עבור MUI */
+:root {
+  --mui-pagination-background: var(--color-surface-variant);
+  --mui-pagination-text: var(--color-text-primary);
+  --mui-pagination-selected-bg: var(--color-primary);
+  --mui-pagination-selected-text: #000;
+  --mui-pagination-hover-bg: rgba(187, 134, 252, 0.2);
+}
+
+/* שינוי צבעים במקום עדכון הסגנון הגלובלי של MUI */
+.MuiPaginationItem-root {
+  background-color: var(--mui-pagination-background) !important;
+  color: var(--mui-pagination-text) !important;
+  margin: 0 var(--spacing-xs) !important;
+  border-radius: var(--border-radius-sm) !important;
+  transition: background-color var(--transition-fast) !important;
+}
+
+.MuiPaginationItem-root.Mui-selected {
+  background-color: var(--mui-pagination-selected-bg) !important;
+  color: var(--mui-pagination-selected-text) !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+
+.MuiPaginationItem-root:hover {
+  background-color: var(--mui-pagination-hover-bg) !important;
+}
+
+/* מדיה קוורי למסכים קטנים */
+@media (max-width: 600px) {
+  .MuiPagination-ul {
+    gap: 2px;
+  }
+
+  .MuiPaginationItem-root {
+    min-width: 30px !important;
+    height: 30px !important;
+    margin: 0 2px !important;
+    font-size: var(--font-size-sm) !important;
+  }
+}

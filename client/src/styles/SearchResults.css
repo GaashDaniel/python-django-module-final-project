@@ -58,7 +58,6 @@
   transform: translateY(-5px);
 }
 
-/* מדיה קוורי עבור מסכים קטנים */
 @media (max-width: 768px) {
   .search-results {
     padding: var(--spacing-md);
